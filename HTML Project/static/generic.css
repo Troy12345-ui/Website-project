@@ -1,0 +1,43 @@
+h1 {
+    text-align: center;
+    background-image: url('https://image.freepik.com/free-vector/green-tones-gradient-background_23-2148380476.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:rgb(0, 0, 0);
+    width: 100%;
+}
+body {
+    background-color: rgb(209, 197, 197);
+    
+}
+
+.home {
+    text-align:center;
+    border:none;
+    background:none;
+    object-fit: fill;
+}
+.home button {
+    border:none;
+    background:none;
+}
+
+img {
+    object-fit: fill;
+}
+
+.accept button{
+    background-color:green;
+    float:center;
+    margin-left: 25%;
+    margin-top:5%;
+    width:50%;
+}
+
+.decline button {
+    background-color:red;
+    float:center;
+    margin-left: 25%;
+    margin-top:10%;
+    width:50%;
+}

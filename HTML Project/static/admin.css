@@ -1,0 +1,62 @@
+
+h1 {
+    text-align: center;
+    color:rgb(245, 11, 11);
+    margin: 0, auto, auto, auto;
+}
+img {
+    object-fit:fill;
+}
+
+body {
+    background: ("/images/adminback.png");
+    background-position: center center; 
+    background-size: 100% 100%;
+}
+label {
+    color:red;
+    text-align: center;
+    display: inline-block;
+    margin: 0 0 0 20%
+
+}
+
+input {
+    text-align: center;
+    display: inline-block;
+    margin: 5% 0 0 0%;
+
+
+}
+
+
+
+.usr {
+    margin: 1% 0 0 43%;
+    display: inline-block;
+}
+
+.psw {
+    margin: 1% 0 0 43%;
+    display: inline-block;
+}
+
+.home button {
+    background:none;
+    position:absolute;
+    top:10px;
+    border:none;
+    cursor:pointer;
+}
+.home button:hover {
+    color:rgb(29, 224, 22);
+}
+.signin button{
+    background-color:forestgreen;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    margin: 10% 0 0 45%;
+}

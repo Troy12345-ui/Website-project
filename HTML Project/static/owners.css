@@ -1,0 +1,29 @@
+
+table {
+    margin-top:0%;
+    float:left;
+    top:50px;
+}
+.tble table, td, th, tr {
+    margin-left:10%;
+    border: 3px solid black;
+}
+.minus button {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: rgba(248, 55, 55, 0.4); 
+    color: rgb(255, 255, 255); 
+    border: 2px solid #f44336;
+    font-size:20px;
+    width:35px;
+    height:30px;
+    border-radius: 50%;
+    display:block;
+    margin-top:2px;
+    
+}
+.minus button:hover {
+    background-color: #f44336;
+    color: white;
+    transition-duration:0.6s;
+}
