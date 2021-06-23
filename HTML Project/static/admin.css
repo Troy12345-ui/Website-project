@@ -1,7 +1,7 @@
 
 h1 {
     text-align: center;
-    color:rgb(245, 11, 11);
+    color:rgb(255, 51, 51);
     margin: 0, auto, auto, auto;
 }
 img {
@@ -9,15 +9,17 @@ img {
 }
 
 body {
-    background: ("/images/adminback.png");
-    background-position: center center; 
+    background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/67febba3-b6d3-4742-88ed-2aa248badd4b/d2w7jct-35bf33c4-cdc4-42e2-b2d2-d1c85d845b87.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY3ZmViYmEzLWI2ZDMtNDc0Mi04OGVkLTJhYTI0OGJhZGQ0YlwvZDJ3N2pjdC0zNWJmMzNjNC1jZGM0LTQyZTItYjJkMi1kMWM4NWQ4NDViODcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dWuR1RAqzb6MeqgL8vONcu8IK5WHv6CbUnmTDOWrLp4");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: 100% 100%;
+    object-fit: cover;
 }
 label {
-    color:red;
-    text-align: center;
+    color:rgb(255, 51, 51);
     display: inline-block;
-    margin: 0 0 0 20%
+    margin: 0 0 0 20%;
+
 
 }
 
@@ -49,10 +51,10 @@ input {
     cursor:pointer;
 }
 .home button:hover {
-    color:rgb(29, 224, 22);
+    background-color:rgb(122, 128, 122);
 }
-.signin button{
-    background-color:forestgreen;
+.signin input{
+    background-color:rgb(255, 51, 51);
     color: white;
     padding: 14px 20px;
     border: none;
@@ -60,3 +62,4 @@ input {
     width: 10%;
     margin: 10% 0 0 45%;
 }
+

@@ -1,7 +1,5 @@
-
-<link href="/static/generic.css" rel="stylesheet" >
-<div class="newstuff">
-<form action="/new" method="GET">
+<p>Edit the property with titile = {{proptitle}}</p>
+<form action="/edit/{{proptitle}}" method="get">
     <label for= "property_title">Property name</label> <br>
     <input type="text" size="50" maxlength="50" name="property_title">
 
@@ -72,13 +70,6 @@
         <option name="yes" value="yes">yes<option>
         <option name="no" value="no">no<option>
     </select>
-    <!-- NOT WORKING-->
-     <br>
-    <input type="submit" value="Save The Property" name="save">
+    <input type="submit" name="save" value="Save the property">
+</form>
 
-    
-</form>
-<form action="/">
-    <input type="submit" value="Back To Homepage">
-</form>
-</div>

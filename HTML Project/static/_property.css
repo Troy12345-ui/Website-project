@@ -25,6 +25,16 @@ body {
   width:50%;
   margin-left:80px;
   color:rgb(0, 0, 0);
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4OWtGQpSDU15dXDDp8N7HZ-Lfl5GQAXvSLw9KsA9LmNTorhu_0IieWetEXzWZC6US0K0&usqp=CAU');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color:rgb(0, 0, 0);
+}
+.sub select{
+  width:50%;
+  margin-left:80px;
+  color:rgb(0, 0, 0);
   background-image: url('https://image.freepik.com/free-vector/green-tones-gradient-background_23-2148380476.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -32,15 +42,71 @@ body {
   color:rgb(0, 0, 0);
 }
 
+.sub label{
+  width:10px;
+  margin-left:90px;
+  color:rgb(0, 0, 0);
+  font-size:24px;
+}
+.prce select{
+  width:50%;
+  margin-left:80px;
+  color:rgb(0, 0, 0);
+  background-image: url('https://media.istockphoto.com/vectors/abstract-blurred-turquoise-background-and-gradient-texture-for-your-vector-id1295775326?b=1&k=6&m=1295775326&s=612x612&w=0&h=Yq5JW5Ee3WOgdO6UlRwhowB0x5pmMV3QhiQRWtiMBhM=');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color:rgb(0, 0, 0);
+}
+.prce form{
+  text-align: center;
+  margin-left:75%;
+  display:inline-block;
+}
+.prce label{
+  width:10px;
+  margin-left:90px;
+  color:rgb(0, 0, 0);
+  font-size:24px;
+}
+
+.checkers {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #0fe479;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	border-radius: 3px;
+  padding: 9px;
+
+}
+.checkers:active, .checkers:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+  content: '\2714';
+}
+.checkers:checked {
+	background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+.checkers:checked:after {
+	font-size: 14px;
+	color: #99a1a7;
+
+}
 .checks input{
-  margin-left:20%;
+  margin-left:15%;
 }
 .checks input:hover {
   cursor:pointer;
 }
 .checks label {
-  float:right;
+  display:inline-block;
+  position: relative;
+  left:77%;
 }
+
 .radio{
   position: relative;
   margin-top:20px;
@@ -51,7 +117,7 @@ body {
   cursor:pointer;
 }
 h1 {
-  background-image: url('https://image.freepik.com/free-vector/green-tones-gradient-background_23-2148380476.jpg');
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrlyc_RFeDCpypea-6rwzoQfLRbdxBaL3M2u8QCu2IMUnV9cApdswh8MDznl-NjulWoJ8&usqp=CAU');
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -60,8 +126,11 @@ h1 {
 .search {
   margin-left:85%;
   margin-top:15px;
+  position:sticky;
 }
-
+.search button {
+  position: sticky;
+}
 .slidecontainer {
   width: 100%; /* Width of the outside container */
   float:right;
@@ -130,4 +199,8 @@ th {
 
 .search button {
   background-image: url('https://image.freepik.com/free-vector/green-tones-gradient-background_23-2148380476.jpg');
+}
+
+span {
+  content: "\2213";
 }

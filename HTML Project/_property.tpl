@@ -16,9 +16,9 @@
     <select id="suburb" name="suburb">
         <option value="0">Any</option>
 
-        % suburbs = ["Manakau","Epsom","One Tree Hill","Howick","Pakurange","Henderson","Botany Downs","Glen Innes","Glendowie","Ellerslie","Papakura","St Johns","Grey Lynn","Remuera","Mt Wellington","Meadowbank"]
+        % suburbs = ["Manakau","Epsom","One Tree Hill","Howick","Pakurange","Henderson","Botany Downs","Glen Innes","Glendowie","Ellerslie","Papakura","St Johns","Grey Lynn","Remuera","Mt Wellington","Meadowbank","St Heliers"]
         % for i in range(len(suburbs)):
-            <option value="{{i+1}}">{{suburbs[i]}}</option>
+            <option value="{{i+1}}" name="{{i+2}}">{{suburbs[i]}}</option>
         %end
 
     </select>
@@ -66,49 +66,68 @@
                 
 </div>
 
-<div class="slidecontainer">
-    <p>Price per week: $<span id="demo"></span>+_100</p>
-    <input type="range" min="100" max="1000" value="550" class="slider" id="myRange">
-  </div>
+<div class="prce">
+    <form>
+    <label>Price</label>
+    <select id="price" name="price">
+    <option value="0">Any</option>
+            % price = ["$50","$100","$150","Howick","Pakurange","Henderson","Botany Downs","Glen Innes","Glendowie","Ellerslie","Papakura","St Johns","Grey Lynn","Remuera","Mt Wellington","Meadowbank","St Heliers"]
+        % for i in range(len(price)):
+            <option value="{{i+1}}" name="{{i+2}}">{{price[i]}}±$50</option>
+        %end
 
-
+    </select>
+    </label>
+</form>
+</div>
+<!-- probably change this back to 1 selected variable that +_like $50 so to make it easier on me and maybe make more general ones like +_$200-->
+<br>
 
 <div class="checks">
-<label class="container">Pets Allowed
-    <input type="checkbox" checked="checked">
+<label class="container" for="dumb">Pets Allowed
+    <input type="checkbox" class="checkers" checked="checked" id="dumb">
     <span class="checkmark"></span>
   </label>
-  <label class="container">Garage
-    <input type="checkbox" checked="checked">
+  <label class="container" for="dumber">Garage
+    <input type="checkbox" class="checkers" checked="checked" id="dumber">
     <span class="checkmark"></span>
   </label>
-  <label class="container">Fully Furnished
-    <input type="checkbox" checked="checked">
+  <label class="container" for="dumbest">Fully Furnished
+    <input type="checkbox" checked="checked"class="checkers" id="dumbest">
     <span class="checkmark"></span>
   </label>
   </div>
-
-  <div class="radio">
-    <label class="container">Residential
-        <input type="radio" checked="checked" name="radio">
-        <span class="checkmark"></span>
-      </label>
-      <label class="container">Commercial
-        <input type="radio" name="radio">
-        <span class="checkmark"></span>
-      </label>
-      </div>
+<br>
       <form class="search">
           <button type='submit'>Search</button>
       </form>
 
+
+<br>
+Symbol INDEX
+    🏠:Garage
+    🐶:pets allowed
+    🚽:No. of bathrooms
+    🛌No. of bedrooms
+    🪑:fully furnished
 <div class='proplisting'>
 <table>
-    <tr>
-        <th>Prop 1</th>
-        <th>Prop 2</th>
-        <th>Prop 3</th>
-    </tr>
+    <!--%for row in rows:
+        <tr>
+        %for col in row:
+            <td>{{col}}</td>
+        
+        %for colt in row:
+            <td>{{colt}}</td>
+
+        
+        %end
+        <td>
+            %for cols in row:
+            <td>{{cols}}</td>
+        </td>
+
+    %end -->
     <tr>
         <th>Prop 1</th>
         <th>Prop 2</th>
@@ -138,12 +157,3 @@
 </div>
 
 
-<script>
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
-
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
-</script>

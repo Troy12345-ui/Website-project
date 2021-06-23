@@ -1,10 +1,10 @@
 
 body {
-    background-image:url("https://media.istockphoto.com/vectors/house-flat-icon-vector-illustration-vector-id1072185464?k=6&m=1072185464&s=612x612&w=0&h=U3XGuy-yXay_2kAr0pWot9Bs0nQv3P49KO6qJB6sG-Y=");
+    background-image:url("https://coolhouse.co.nz/wp-content/uploads/2019/08/Coolhouse-MINT-Design-HERO-Summer.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
-  
+    background-size: 100% 100%;
+    object-fit: cover;
   }
   
 
@@ -12,7 +12,7 @@ body {
     text-decoration: none;
     color:rgb(0, 0, 0);
     background-color:transparent;
-    text-shadow:-1px 1px 1px rgb(97, 122, 177);
+    text-shadow:-1px 1px 1px rgb(134, 187, 216);
     border: 2px solid black;
     transition-duration: 0.3s;
     cursor: pointer;
@@ -25,15 +25,15 @@ body {
   }
   .button5 button:hover {
     transition-duration:0.4s;
-    background-color:rgb(107, 107, 126);
+    background-color:rgba(98, 148, 96, 0.6);
     transform: translate(0, 5px);
-    text-shadow:-1px 1px 1px rgb(252, 251, 251);
+    text-shadow:-2px 2px 2px rgb(168, 165, 165);
 
   }
   
   .center button {
-    background-color: rgba(99, 104, 99, 0.7); /* Green background */
-    color: rgb(189, 171, 171); /* White text */
+    background-color: rgba(98, 148, 96, 0.7); /* Green background */
+    color: rgb(0, 0, 0); /* White text */
     padding: 10px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
     float: left; /* Float the buttons side by side */
@@ -43,6 +43,8 @@ body {
     height: 55px;
     font-size: 30px;
     border:none;
+    text-shadow:-1px 1px 1px rgb(252, 251, 251);
+    position: sticky;
   }
   .center:after {
     content: "";
@@ -54,21 +56,23 @@ body {
   }
 
   .center2 button:hover {
-    background-color:rgb(77, 75, 75);
+    background-color:rgb(61, 93, 60);
     border:4px solid black;
     transition-duration: 0.4s;
     opacity: 0.95;
     color: white;
-    transform: translate(1px, 3px)
+    transform: translate(1px, 3px);
+    text-shadow:-2px 2px 2px rgb(0, 0, 0);
   }
   
   .center1 button:hover {
-    background-color:rgb(77, 75, 75);
+    background-color:rgb(61, 93, 60);
     border:4px solid black;
     transition-duration: 0.4s;
     opacity: 0.95;
     color: white;
-    transform: translate(-1px, 3px)
+    transform: translate(-1px, 3px);
+    text-shadow:2px 2px 2px rgb(0, 0, 0);
   }
   
 h2 {
