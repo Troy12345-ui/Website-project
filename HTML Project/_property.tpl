@@ -1,12 +1,12 @@
 <!doctype html>
 <title>Property Search</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="/static/_property.css" rel="stylesheet" >
+<link href="/static/_property.css" rel="stylesheet">
 <div class="home">
-<form method='get'action='/'><button type='submit'><img src="images/logo.png" width="50"></button></form>
+<form method='get'action='/'><button type='submit'><img src="/images/rpml.png" width="50"></button></form>
 </div>
+<div class="topstuff">
 <h1>Which Property would you Like to Find.</h1>
-
+</div>
 
 
 <div class="dropdown">
@@ -104,55 +104,24 @@
 
 
 <br>
+<div class="index">
 Symbol INDEX
     🏠:Garage
     🐶:pets allowed
     🚽:No. of bathrooms
     🛌No. of bedrooms
     🪑:fully furnished
+</div>
 <div class='proplisting'>
 <table>
-    <!--%for row in rows:
+    <tr>
+        <th>Property listings</th>
+    </tr>
+        %for row in rows:
         <tr>
         %for col in row:
             <td>{{col}}</td>
-        
-        %for colt in row:
-            <td>{{colt}}</td>
-
-        
-        %end
-        <td>
-            %for cols in row:
-            <td>{{cols}}</td>
-        </td>
-
-    %end -->
-    <tr>
-        <th>Prop 1</th>
-        <th>Prop 2</th>
-        <th>Prop 3</th>
-    </tr>
-    <tr>
-        <th>Prop 1</th>
-        <th>Prop 2</th>
-        <th>Prop 3</th>
-    </tr>
-    <tr>
-        <th>Prop 1</th>
-        <th>Prop 2</th>
-        <th>Prop 3</th>
-    </tr>
-    <tr>
-        <th>Prop 1</th>
-        <th>Prop 2</th>
-        <th>Prop 3</th>
-    </tr>
-    <tr>
-        <th>Prop 1</th>
-        <th>Prop 2</th>
-        <th>Prop 3</th>
-    </tr>
+    %end
 </table>
 </div>
 

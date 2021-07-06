@@ -9,12 +9,17 @@ def index():
 @route('/_property')
 @view('_property')
 def _property():
+    pass
+
+@route('/_property')
+def _property():
     conn = sqlite3.connect('props.db')
     c = conn.cursor()
-    c.execute("SELECT property_title, price, bathrooms, bedrooms, suburbs, pets_allowed, garage, furnished, available FROM props")
-    answers = c.fetchall()
+    c.execute("SELECT id, property_title, price, bathrooms, bedrooms, suburbs, pets_allowed, garage, furnished, available FROM props")
+    results = c.fetchall()
     c.close()
-    return template('_property.tpl', planes=answers)
+    #just making one row, cant be assed making three per row
+    return template('_property.tpl', rows=results)
 
 @route('/admin')
 @view('admin')
@@ -57,6 +62,11 @@ def new():
 def del_prop():
     pass
 
+@route('/owners')
+@view('owners')
+def owners():
+    pass
+
 @route('/admin')
 @view('admin')
 def admin():
@@ -82,8 +92,6 @@ def check_login(username,password):
         conn.commit()
         c.close()
         return True
-
-    
     else:
         print("Invalid Login")
         c.close()
@@ -104,31 +112,33 @@ def do_login():
 def owners():
     conn = sqlite3.connect('props.db')
     c = conn.cursor()
-    c.execute("SELECT property_title, price, bathrooms, bedrooms, suburbs, pets_allowed, garage, furnished, available FROM props")
+    c.execute("SELECT id, property_title, price, bathrooms, bedrooms, suburbs, pets_allowed, garage, furnished, available FROM props")
     results = c.fetchall()
     c.close()
-    return template('owners.tpl', rows=results)
+    #find out how to select the one specific prop id
+    return template('owners.tpl', rows=results, propId=results)
 
 
 @route('/del_prop', method="GET")
 def del_prop():
         if request.GET.get('delprop','').strip():
-            delhome = request.GET.get('property_title', '').strip()
+            delhome = request.GET.get('id').strip()
             conn = sqlite3.connect('props.db')
+            print('delhome:', delhome)
             c = conn.cursor()
-            c.execute("DELETE FROM props WHERE property_title like '{}'".format(delhome))
+            c.execute("DELETE FROM props WHERE id like '{}'".format(delhome))
             conn.commit() 
             c.close()
-            return '<p> the wish %s has Been deleted</p>'.format(delhome)
-            return template('owners.tpl')
+            return '<p> the wish {} has Been deleted</p> <form action="/owners"> <button type="submit">Back to admin page</button>'.format(delhome)
         else:
             conn = sqlite3.connect('props.db')
             c = conn.cursor()
-            c.execute("SELECT property_title FROM props")
+            c.execute("SELECT id FROM props")
+            #for some stupid reason saves a list full of tuples
             k = c.fetchall()
-            c.close()
-            return template('del_prop.tpl', proptitle=k)
-
+            print('k:', k)
+            return template('del_prop.tpl', ids=k)
+            
 
 @route('/new', method='GET')
 def new_item():
@@ -162,30 +172,60 @@ def new_item():
         new_id = c.lastrowid
         conn.commit() 
         c.close()
-        return '<p>The new property was inserted into the database, the ID is %s</p>' % new_id
-        return template('owners.tpl')
+        return '<p>The new property was inserted into the database, the ID is %s</p> <form action="/owners"> <button type="submit">Back to admin page</button>' % new_id
+        
     else:
         return template('new.tpl')
 
 @route('/edit/:propId', method='GET')
 def edit_item(propId):
-
-    if request.GET.get('save','').strip():
-        edithome = request.GET.get('property_title','').strip()
+    #get edithome before anything, do this by doing that removal of the tuple lsit thing again.
+    if request.GET.get('correct','').strip():
+        prop_name = request.GET.get('property_title','').strip()
         prick = request.GET.get('price','').strip()
-#index using prop title to select entire row to then edit
+        bathroom = request.GET.get('bathrooms','').strip()
+        bedroom = request.GET.get('bedrooms','').strip()
+        suburb = request.GET.get('suburbs','').strip()
+        pets_in = request.GET.get('pets_in2','').strip()
+        if pets_in == 'pets_in2':
+                pets_in = 'yes'
+        else:
+                pets_in = 'no'
+
+        cars_allowed = request.GET.get('cars2_allowed','').strip()
+        if cars_allowed == 'cars2_allowed':
+                cars_allowed = 'yes'
+        else:
+                cars_allowed = 'no'
+
+        chairs = request.GET.get('chairs2','').strip()
+        if chairs  == 'chairs2':
+                chairs = 'yes'
+        else:
+                chairs = 'no'
+
+        avavs = request.GET.get('available','').strip()
+
         conn = sqlite3.connect('prop.db')
         c = conn.cursor()
-        c.execute("UPDATE props SET price = ? bathrooms = ? bedrooms = ? suburbs = ? pets_allowed = ? garage = ? furnished = ? available = ? WHERE id LIKE ?", (edit, status, wishId))
+        c.execute("UPDATE props SET property_title = ? price = ? bathrooms = ? bedrooms = ? suburbs = ? pets_allowed = ? garage = ? furnished = ? available = ? WHERE id LIKE ?", (prop_name, prick, bathroom, bedroom, suburb, pets_in, cars_allowed, chairs, avavs, propId))
         conn.commit()
-        return '<p>The item number %s was successfully updated</p>' % wishId
+        return '<p>The item number %s was successfully updated</p> <form action="/owners"> <button type="submit">Back to admin page</button>' % edithome
     else:
         conn = sqlite3.connect('props.db')
         c = conn.cursor()
-        c.execute("SELECT property_title,price,bathrooms,bedrooms,suburbs,pets_allowed,garage,furnished,available FROM props WHERE property_title LIKE '{}'" .format(edithome))
+        c.execute("SELECT property_title FROM props WHERE id LIKE '{}'" .format(edithome))
+        cur1_data = c.fetchone()
+        c.execute("SELECT price FROM props WHERE id LIKE '{}'" .format(edithome))
         cur_data = c.fetchone()
+        c.execute("SELECT bathrooms FROM props WHERE id LIKE '{}'" .format(edithome))
+        cur2_data = c.fetchone()
+        c.execute("SELECT bedrooms FROM props WHERE id LIKE '{}'" .format(edithome))
+        cur3_data = c.fetchone()
+        c.execute("SELECT suburbs FROM props WHERE id LIKE '{}'" .format(edithome))
+        cur4_data = c.fetchone()
         W = edithome
-        return template('edit_wish.tpl', old=cur_data, wishId=W)
+        return template('edit_wish.tpl', old=cur_data, old2=cur2_data, old3=cur3_data, old4=cur4_data, old1=cur1_data, propId=propId)
 
 
 # start the website

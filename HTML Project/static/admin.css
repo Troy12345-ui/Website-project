@@ -9,7 +9,7 @@ img {
 }
 
 body {
-    background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/67febba3-b6d3-4742-88ed-2aa248badd4b/d2w7jct-35bf33c4-cdc4-42e2-b2d2-d1c85d845b87.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY3ZmViYmEzLWI2ZDMtNDc0Mi04OGVkLTJhYTI0OGJhZGQ0YlwvZDJ3N2pjdC0zNWJmMzNjNC1jZGM0LTQyZTItYjJkMi1kMWM4NWQ4NDViODcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dWuR1RAqzb6MeqgL8vONcu8IK5WHv6CbUnmTDOWrLp4");
+    background: url("/images/background.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -63,3 +63,7 @@ input {
     margin: 10% 0 0 45%;
 }
 
+.signin input:hover{
+    background-color: green;
+    transition-duration: 0.4s;
+}

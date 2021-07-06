@@ -1,7 +1,9 @@
 body {
-    background-color:rgb(255, 255, 255);
+    background-image: url("https://www.xmple.com/wallpaper/white-grey-gradient-linear-1920x1080-c2-ffffff-808080-a-300-f-14.svg");
     margin: auto auto auto auto;
-    
+    object-fit: cover;
+    background-size: 100% 100%;
+    z-index: 2;
   }
 
 .home button {
@@ -25,7 +27,7 @@ body {
   width:50%;
   margin-left:80px;
   color:rgb(0, 0, 0);
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4OWtGQpSDU15dXDDp8N7HZ-Lfl5GQAXvSLw9KsA9LmNTorhu_0IieWetEXzWZC6US0K0&usqp=CAU');
+  background-image: url('https://media.istockphoto.com/vectors/abstract-blurred-turquoise-background-and-gradient-texture-for-your-vector-id1295775326?b=1&k=6&m=1295775326&s=612x612&w=0&h=Yq5JW5Ee3WOgdO6UlRwhowB0x5pmMV3QhiQRWtiMBhM=');
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -35,7 +37,7 @@ body {
   width:50%;
   margin-left:80px;
   color:rgb(0, 0, 0);
-  background-image: url('https://image.freepik.com/free-vector/green-tones-gradient-background_23-2148380476.jpg');
+  background-image: url('https://media.istockphoto.com/vectors/abstract-blurred-turquoise-background-and-gradient-texture-for-your-vector-id1295775326?b=1&k=6&m=1295775326&s=612x612&w=0&h=Yq5JW5Ee3WOgdO6UlRwhowB0x5pmMV3QhiQRWtiMBhM=');
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -73,7 +75,7 @@ body {
 .checkers {
   -webkit-appearance: none;
   appearance: none;
-  background-color: #0fe479;
+  background-color: #33cbdf;
 	border: 1px solid #cacece;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
 	border-radius: 3px;
@@ -116,8 +118,8 @@ body {
 .radio input:hover {
   cursor:pointer;
 }
-h1 {
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrlyc_RFeDCpypea-6rwzoQfLRbdxBaL3M2u8QCu2IMUnV9cApdswh8MDznl-NjulWoJ8&usqp=CAU');
+.topstuff h1 {
+  background-image: url('https://media.istockphoto.com/vectors/abstract-blurred-turquoise-background-and-gradient-texture-for-your-vector-id1295775326?b=1&k=6&m=1295775326&s=612x612&w=0&h=Yq5JW5Ee3WOgdO6UlRwhowB0x5pmMV3QhiQRWtiMBhM=');
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -186,14 +188,14 @@ h1 {
 table, tr, td {
   border: 2px solid black;
   width: 80%;
-  height: 300px;
+  height: 50px;
   margin-left:100px;
-  border-collapse: separate;
-  border-spacing: 30px 45px;
+  background-color:white;
 }
 th {
   border: 2px dotted black;
   margin: 50px 20px 50px 20px;
+  background-color:white;
 }
 
 
@@ -203,4 +205,20 @@ th {
 
 span {
   content: "\2213";
+}
+
+.proplisting {
+  background-image: url('/images/backround.png');
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  object-fit: cover;
+  z-index: 1;
+
+}
+
+.index {
+  position: sticky;
+  top:20px;
+  background-color: rgba(47, 79, 79, 0.6); 
+  width:750px;
 }

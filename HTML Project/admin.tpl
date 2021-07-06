@@ -20,6 +20,6 @@
 </h2>
 </div>
 <div class='home'>
-<form method='get'action='/'><button type='submit'><img src="images/logo.png" width="100px" height="100px"></button></form>
+<form method='get'action='/'><button type='submit'><img src="/images/rpml.png" width="100px" height="100px"></button></form>
 <br>
 </div>

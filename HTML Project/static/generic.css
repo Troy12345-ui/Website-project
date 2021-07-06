@@ -1,14 +1,18 @@
 h1 {
     text-align: center;
-    background-image: url('https://thumbs.dreamstime.com/b/hex-synergy-digital-green-background-image-palette-transparency-flat-fills-landscape-39681827.jpg');
+    background-image: url('/images/banner.png');
     background-repeat: no-repeat;
     background-size: cover;
     color:rgb(0, 0, 0);
     width: 100%;
 }
 body {
-    background-color: rgb(209, 197, 197);
-    
+    background-image: url('https://wallpaperaccess.com/full/4291005.jpg');
+    color:white;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    object-fit: cover;
 }
 
 .home {
@@ -26,29 +30,39 @@ img {
     object-fit: fill;
 }
 
-.accept button{
+.accept input{
     background-color:green;
     float:center;
-    margin-left: 25%;
+    margin-left: 42%;
     margin-top:5%;
-    width:50%;
+    width:10%;
+    height: 10%;
+    font-size: 35px;
 }
-
 .decline button {
     background-color:red;
     float:center;
-    margin-left: 25%;
-    margin-top:10%;
-    width:50%;
+    margin-left: 42%;
+    margin-top:5%;
+    width:10%;
+    height: 10%;
+    font-size: 35px;
 }
 .newstuff {
     text-align:center;
 }
 
+.backboy input{
+    margin-left: 42%;
+}
 .newstuff input {
     margin-top: 10px;
 }
 
 .newstuff select {
     margin-top: 10px;
+}
+
+.choose select{
+    margin-left:45%;
 }
