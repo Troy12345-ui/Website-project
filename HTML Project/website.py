@@ -15,7 +15,7 @@ def _property():
 def _property():
     conn = sqlite3.connect('props.db')
     c = conn.cursor()
-    c.execute("SELECT id, property_title, price, bathrooms, bedrooms, suburbs, pets_allowed, garage, furnished, available FROM props")
+    c.execute("SELECT property_title, price, bathrooms, bedrooms, suburbs, pets_allowed, garage, furnished, available FROM props")
     results = c.fetchall()
     c.close()
     #just making one row, cant be assed making three per row
@@ -116,7 +116,7 @@ def owners():
     results = c.fetchall()
     c.close()
     #find out how to select the one specific prop id
-    return template('owners.tpl', rows=results, propId=results)
+    return template('owners.tpl', rows=results)
 
 
 @route('/del_prop', method="GET")
@@ -124,19 +124,18 @@ def del_prop():
         if request.GET.get('delprop','').strip():
             delhome = request.GET.get('id').strip()
             conn = sqlite3.connect('props.db')
-            print('delhome:', delhome)
             c = conn.cursor()
             c.execute("DELETE FROM props WHERE id like '{}'".format(delhome))
             conn.commit() 
             c.close()
             return '<p> the wish {} has Been deleted</p> <form action="/owners"> <button type="submit">Back to admin page</button>'.format(delhome)
+            return #'<style> p {left: 200px; top: 200px;} button {left:200px; top: 200px;}</style><p> the wish {} has Been deleted</p> <form action="/owners"> <button type="submit">Back to admin page</button>'.format(delhome)
         else:
             conn = sqlite3.connect('props.db')
             c = conn.cursor()
             c.execute("SELECT id FROM props")
             #for some stupid reason saves a list full of tuples
             k = c.fetchall()
-            print('k:', k)
             return template('del_prop.tpl', ids=k)
             
 
@@ -172,7 +171,8 @@ def new_item():
         new_id = c.lastrowid
         conn.commit() 
         c.close()
-        return '<p>The new property was inserted into the database, the ID is %s</p> <form action="/owners"> <button type="submit">Back to admin page</button>' % new_id
+        return '<p> the wish {} has Been deleted</p> <form action="/owners"> <button type="submit">Back to admin page</button>'
+        #return '<style> body {position:absolute; left:200px; top: 200px; color: rgb(235, 27, 27); font-size:30px; background-image: url("/images/backround.png"); } button {position:absolute; left:300px; top: 100px; background-color:rgb(255, 51, 51); width: 10%; cursor: pointer; border: none; padding: 14px 20px; color: white;}</style><p>The new property was inserted into the database, the ID is %s</p> <form action="/owners"> <button type="submit">Back to admin page</button>' % new_id
         
     else:
         return template('new.tpl')
@@ -181,6 +181,7 @@ def new_item():
 def edit_item(propId):
     #get edithome before anything, do this by doing that removal of the tuple lsit thing again.
     if request.GET.get('correct','').strip():
+        #learn about .replace() after the .strip
         prop_name = request.GET.get('property_title','').strip()
         prick = request.GET.get('price','').strip()
         bathroom = request.GET.get('bathrooms','').strip()
@@ -210,22 +211,25 @@ def edit_item(propId):
         c = conn.cursor()
         c.execute("UPDATE props SET property_title = ? price = ? bathrooms = ? bedrooms = ? suburbs = ? pets_allowed = ? garage = ? furnished = ? available = ? WHERE id LIKE ?", (prop_name, prick, bathroom, bedroom, suburb, pets_in, cars_allowed, chairs, avavs, propId))
         conn.commit()
-        return '<p>The item number %s was successfully updated</p> <form action="/owners"> <button type="submit">Back to admin page</button>' % edithome
+        return '<p> the wish {} has Been deleted</p> <form action="/owners"> <button type="submit">Back to admin page</button>'
+        #return '<style> p {left:200px; top: 200px;} button {left:200px; top: 200px;}</style><p>The item number %s was successfully updated</p> <form action="/owners"> <button type="submit">Back to admin page</button>' % edithome
     else:
         conn = sqlite3.connect('props.db')
         c = conn.cursor()
-        c.execute("SELECT property_title FROM props WHERE id LIKE '{}'" .format(edithome))
+        editid = request.GET.getall('edit').strip()
+        c.execute("SELECT property_title FROM props WHERE id LIKE '{}'" .format(editid))
         cur1_data = c.fetchone()
-        c.execute("SELECT price FROM props WHERE id LIKE '{}'" .format(edithome))
+        c.execute("SELECT price FROM props WHERE id LIKE '{}'" .format(editid))
         cur_data = c.fetchone()
-        c.execute("SELECT bathrooms FROM props WHERE id LIKE '{}'" .format(edithome))
+        c.execute("SELECT bathrooms FROM props WHERE id LIKE '{}'" .format(editid))
         cur2_data = c.fetchone()
-        c.execute("SELECT bedrooms FROM props WHERE id LIKE '{}'" .format(edithome))
+        c.execute("SELECT bedrooms FROM props WHERE id LIKE '{}'" .format(editid))
         cur3_data = c.fetchone()
-        c.execute("SELECT suburbs FROM props WHERE id LIKE '{}'" .format(edithome))
+        c.execute("SELECT suburbs FROM props WHERE id LIKE '{}'" .format(editid))
         cur4_data = c.fetchone()
         W = edithome
-        return template('edit_wish.tpl', old=cur_data, old2=cur2_data, old3=cur3_data, old4=cur4_data, old1=cur1_data, propId=propId)
+        #i need to set the id as the row i have selected, then get the id then use that row
+        return template('edit_wish.tpl', old=cur_data, old2=cur2_data, old3=cur3_data, old4=cur4_data, old1=cur1_data, propId=editid)
 
 
 # start the website

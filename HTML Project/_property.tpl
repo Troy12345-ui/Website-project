@@ -122,6 +122,7 @@ Symbol INDEX
         %for col in row:
             <td>{{col}}</td>
     %end
+    %end
 </table>
 </div>
 
