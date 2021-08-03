@@ -40,7 +40,6 @@
 
     <label>Suburb
     <select id="suburbs" name="suburbs">
-        <option value="Any">Any</option>
         <option value="Manakau" name="Manakau">Manakau</option>
         <option value="Epsom" name="Epsom">Epsom</option>
         <option value="One Tree Hill" name="One Tree Hill">One Tree Hill</option>

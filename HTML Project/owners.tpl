@@ -42,7 +42,7 @@
         %end
         <td>
         %propId = row[0]
-                <form action="/edit:{{propId}}" method="GET" id="edit">
+                <form action="/edit_prop" method="GET" id="edit">
                     <button type="submit" name="edit" value={{row[0]}}>Edit Property</button>
                 </form>
         </td>
