@@ -5,13 +5,4 @@ conn.execute("INSERT INTO 'login' (username,password) VALUES ('stinkywill','smel
 conn.execute("INSERT INTO 'login' (username,password) VALUES ('amazinglucy','trashclayne')")
 conn.execute("INSERT INTO 'login' (username,password) VALUES ('YunChe','LongChen')")
 conn.commit()
-    <label>Suburb
-    <select id="suburbs" name="suburbs">
-        %suburbs = ["Manakau","Epsom","One Tree Hill","Howick","Pakuranga","Henderson","Botany Downs","Glen Innes","Glendowie","Ellerslie","Papakura","St Johns","Grey Lynn","Remuera","Mt Wellington","Meadowbank","St Heliers"] 
-            %for i in suburbs:
-                <option value="{{i}}" name="{{i}}">{{i}}</option>
-            %end
-
-    </select>
-    </label>
-    <br>
+    

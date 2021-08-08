@@ -1,4 +1,5 @@
 <link href="/static/generic.css" rel="stylesheet">
+<div class='editstuff'>
 <p>Edit the property with title = {{old1}}</p>
 <form action="/edit_prop" method="GET">
     <label for= "property_title">Property Title</label> <br>
@@ -7,10 +8,19 @@
     <br>
     <label>Price</label>
     <select id="price" name="price" placeholder="{{old}}">
-            %i = 10
-            #for i[0] in range(1,14):
-                <option value="{{i*50}}" name="{{i*50}}">{{i*50}}±</option>
-            %end
+            <option value="50" name="50">50±</option>
+            <option value="100" name="100">100±</option>
+            <option value="150" name="150">150±</option>
+            <option value="200" name="200">200±</option>
+            <option value="250" name="250">250±</option>
+            <option value="300" name="300">300±</option>
+            <option value="350" name="350">350±</option>
+            <option value="400" name="400">400±</option>
+            <option value="450" name="450">450±</option>
+            <option value="500" name="500">500±</option>
+            <option value="550" name="550">550±</option>
+            <option value="600" name="600">600±</option>
+            <option value="650" name="650">650±</option>
 
 
     </select>
@@ -46,4 +56,5 @@
 <form action="/owners">
     <input type="submit" value="Back To Admin Page">
 </form>
+</div>
 </div>
