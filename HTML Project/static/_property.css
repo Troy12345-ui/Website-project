@@ -2,7 +2,7 @@ body {
     background-image: url("https://www.xmple.com/wallpaper/white-grey-gradient-linear-1920x1080-c2-ffffff-808080-a-300-f-14.svg");
     margin: auto auto auto auto;
     object-fit: cover;
-    background-size: 100% 45%;
+    background-size: 100% 570px;
     z-index: 2;
   }
 
@@ -14,8 +14,9 @@ body {
 }
 .dropdown form{
   text-align: center;
-  margin-left:75%;
+  margin-left:76%;
   display:inline-block;
+  width: 250px;
 }
 .dropdown label{
     width:10px;
@@ -35,13 +36,12 @@ body {
 }
 .sub select{
   width:50%;
-  margin-left:80px;
   color:rgb(0, 0, 0);
   background-image: url('https://media.istockphoto.com/vectors/abstract-blurred-turquoise-background-and-gradient-texture-for-your-vector-id1295775326?b=1&k=6&m=1295775326&s=612x612&w=0&h=Yq5JW5Ee3WOgdO6UlRwhowB0x5pmMV3QhiQRWtiMBhM=');
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  color:rgb(0, 0, 0);
+
 }
 
 .sub label{
@@ -53,7 +53,6 @@ body {
 .prce select{
   width:50%;
   margin-left:80px;
-  color:rgb(0, 0, 0);
   background-image: url('https://media.istockphoto.com/vectors/abstract-blurred-turquoise-background-and-gradient-texture-for-your-vector-id1295775326?b=1&k=6&m=1295775326&s=612x612&w=0&h=Yq5JW5Ee3WOgdO6UlRwhowB0x5pmMV3QhiQRWtiMBhM=');
   background-repeat: no-repeat;
   background-size: cover;
@@ -62,8 +61,9 @@ body {
 }
 .prce form{
   text-align: center;
-  margin-left:75%;
+  margin-left:76%;
   display:inline-block;
+  width: 250px;
 }
 .prce label{
   width:10px;
@@ -185,7 +185,7 @@ body {
   cursor: pointer; /* Cursor on hover */
 }
 
-table, tr {
+table {
   border: 2px solid black;
   width: 80%;
   height: 100px;
@@ -196,15 +196,18 @@ table, tr {
 }
 td {
   margin: 0px 50px 0px 50px;
-  border: 2px dotted black;
-
+  border-top: 2px dotted black;
 }
 th {
   border: 2px dotted black;
   margin: 50px 20px 50px 20px;
   background-color:white;
 }
-
+tr {
+  width: 80%;
+  height: 100px;
+  font-size: 24px;
+}
 
 .search button {
   background-image: url('https://image.freepik.com/free-vector/green-tones-gradient-background_23-2148380476.jpg');
@@ -229,3 +232,20 @@ span {
   background-color: rgba(47, 79, 79, 0.6); 
   width:750px;
 }
+
+/*tbody>tr>:nth-child(4) {
+  bathroom one
+}
+tbody>tr>:nth-child(5) {
+  bedroom one
+}
+tbody>tr>:nth-child(6) {
+  pets
+}
+tbody>tr>:nth-child(7) {
+  garage
+}
+tbody>tr>:nth-child(8) {
+  furnished
+}
+*/

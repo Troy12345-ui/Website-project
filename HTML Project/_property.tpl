@@ -71,9 +71,9 @@
     <label>Price</label>
     <select id="price" name="price">
     <option value="0">Any</option>
-            % price = ["$50","$100","$150","Howick","Pakurange","Henderson","Botany Downs","Glen Innes","Glendowie","Ellerslie","Papakura","St Johns","Grey Lynn","Remuera","Mt Wellington","Meadowbank","St Heliers"]
+            % price = ["$500","$600","$700","$800","$900","$1000","$1100","$1200"]
         % for i in range(len(price)):
-            <option value="{{i+1}}" name="{{i+2}}">{{price[i]}}±$50</option>
+            <option value="{{i+1}}" name="{{i+2}}">{{price[i]}}</option>
         %end
 
     </select>
@@ -85,23 +85,29 @@
 
 <div class="checks">
 <label class="container" for="dumb">Pets Allowed
-    <input type="checkbox" class="checkers" checked="checked" id="dumb">
+    <input type="checkbox" class="checkers" id="dumb" checked>
     <span class="checkmark"></span>
   </label>
   <label class="container" for="dumber">Garage
-    <input type="checkbox" class="checkers" checked="checked" id="dumber">
+    <input type="checkbox" class="checkers" id="dumber" checked>
     <span class="checkmark"></span>
   </label>
   <label class="container" for="dumbest">Fully Furnished
-    <input type="checkbox" checked="checked"class="checkers" id="dumbest">
+    <input type="checkbox"class="checkers" id="dumbest" checked>
     <span class="checkmark"></span>
   </label>
   </div>
 <br>
       <form class="search">
-          <button type='submit'>Search</button>
+          <input type='submit' value="search" name="search">
       </form>
 
+<iframe id="inlineFrameExample"
+    title="Inline Frame Example"
+    width="500px"
+    height="375px"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+</iframe>
 
 <br>
 <div class="index">
@@ -115,7 +121,9 @@ Symbol INDEX
 <div class='proplisting'>
 <table>
     <tr>
+        <th> RPML </th>
         <th>Property listings</th>
+        <th> RPML </th>
     </tr>
         %for row in rows:
         <tr>

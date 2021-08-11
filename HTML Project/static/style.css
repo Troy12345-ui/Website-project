@@ -1,19 +1,20 @@
 
 body {
-    background-image:url("https://coolhouse.co.nz/wp-content/uploads/2019/08/Coolhouse-MINT-Design-HERO-Summer.jpg");
+    background-image:url("/images/theone.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     object-fit: cover;
   }
+  .button5{
+    margin-top: 10px;
+  }
   
-
   .button5 button {
     text-decoration: none;
     color:rgb(0, 0, 0);
     background-color:transparent;
-    text-shadow:-1px 1px 1px rgb(134, 187, 216);
-    border: 2px solid black;
+    border: 2px solid rgb(0, 0, 0);
     transition-duration: 0.3s;
     cursor: pointer;
     text-align: center;
@@ -21,13 +22,15 @@ body {
     height: 40px;
     width:300px;
     font-size:25px;
-    
+    text-shadow:-0.5px 0.5px 0.5px rgb(131, 129, 129);
   }
   .button5 button:hover {
     transition-duration:0.4s;
     background-color:rgba(98, 148, 96, 0.6);
     transform: translate(0, 5px);
-    text-shadow:-2px 2px 2px rgb(168, 165, 165);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    text-shadow:-0.5px 0.5px 0.5px rgb(231, 224, 224);
 
   }
   

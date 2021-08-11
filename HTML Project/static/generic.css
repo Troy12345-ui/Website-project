@@ -1,13 +1,12 @@
 h1 {
-    text-align: center;
-    background-image: url('/images/banner.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    color:rgb(0, 0, 0);
-    width: 100%;
+	color: white;
+	text-align: center;
+}
+.choose h1 {
+	margin-top: 10%;
 }
 body {
-    background-image: url('https://wallpaperaccess.com/full/4291005.jpg');
+    background-image: url('https://wallpaper.dog/large/17278525.png');
     color:white;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -30,30 +29,66 @@ img {
     object-fit: fill;
 }
 
-.accept input{
-    background-color:green;
-    float:center;
-    margin-left: 42%;
-    margin-top:5%;
-    width:10%;
-    height: 10%;
-    font-size: 35px;
+.accept input {
+	box-shadow:inset 0px 2px 3px 0px #b5e888;
+	background:linear-gradient(to bottom, #9beb55 5%, #639e33 100%);
+	background-color:#9beb55;
+	border-radius:6px;
+	border:1px solid #31472d;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Georgia;
+	font-size:24px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #7fb051;
+	width:100px;
+}
+.accept input:hover {
+	background:linear-gradient(to bottom, #639e33 5%, #9beb55 100%);
+	background-color:#639e33;
+}
+.accept input:active {
+	position:relative;
+	top:1px;
 }
 .decline button {
-    background-color:red;
-    float:center;
-    margin-left: 42%;
-    margin-top:5%;
-    width:10%;
-    height: 10%;
-    font-size: 35px;
+	box-shadow:inset 1px 0px 12px -4px #f29c93;
+	background:linear-gradient(to bottom, #fe1a00 5%, #7d1717 100%);
+	background-color:#fe1a00;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Georgia;
+	font-size:21px;
+	font-weight:bold;
+	padding:10px 29px;
+	text-decoration:none;
+	text-shadow:10px 2px 19px #b23e35;
+	width:100px;
 }
+.decline button:hover {
+	background:linear-gradient(to bottom, #7d1717 5%, #fe1a00 100%);
+	background-color:#7d1717;
+    transition-duration: 5s;
+}
+.decline button:active {
+	position:relative;
+	top:1px;
+}
+
+        
 .newstuff {
     text-align:center;
+    color: white;
 }
 
 .backboy input{
-    margin-left: 42%;
+    margin-left: 44%;
 }
 .newstuff input {
     margin-top: 10px;
@@ -66,3 +101,56 @@ img {
 .choose select{
     margin-left:45%;
 }
+
+.editstuff {
+    text-align:center;
+    color: white;
+}
+
+.editstuff input {
+    margin-top: 10px;
+}
+
+.editstuff select {
+    margin-top: 10px;
+}
+
+.decline button {
+	margin-left: 45%;
+	margin-top: 3%;
+}
+
+.accept input {
+	margin-left: 45%;
+	margin-top: 3%;
+}
+
+.editstuff input {
+	text-align: center;
+}
+
+.idstuff input{
+	border-width:0px;
+	border:none;
+	outline:none;
+	background-color: rgba(255, 255, 255, 0);
+	color: white;
+}
+
+.choose select{
+	background-color: rgb(255, 205, 111);
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+.choose option{
+	background-color:  rgb(255, 205, 111);
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+.choose option:nth-child(even) {
+	background-color: rgb(253, 165, 0);
+  }

@@ -9,23 +9,27 @@ table {
     margin-left:10%;
     border: 3px solid black;
 }
+tr:nth-child(even) {
+  background-color: #f0e6e6;
+}
 .minus button {
-    background-color: rgb(235, 27, 27);
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-    width:220px;
+  box-shadow: -5px 7px 18px -11px #0d0f0c;
+  background-color:#75a65d;
+  border-radius:4px;
+  border:1px solid #060805;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Georgia;
+  font-size:20px;
+  font-weight:bold;
+  padding:12px 41px;
+  text-decoration:none;
+  text-shadow:1px 2px 4px #36422e;
 }
 .minus button:hover {
-    background-color: darkred;
-    transition-duration: 0.4s;
+  background-color:#517c3b;
+  transition-duration: 0.4s;
 }
 .tble td {
     text-align:center;
@@ -34,22 +38,24 @@ table {
 
 
 .otherbutt button {
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-    width:220px;
+  box-shadow: -5px 7px 18px -11px #0d0f0c;
+  background-color:#75a65d;
+  border-radius:4px;
+  border:1px solid #060805;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Georgia;
+  font-size:20px;
+  font-weight:bold;
+  padding:12px 41px;
+  text-decoration:none;
+  text-shadow:1px 2px 4px #36422e;
+
 }
 .otherbutt button:hover {
-    background-color:green ;
-    transition-duration: 0.4s;
+  background-color:#517c3b;
+  transition-duration: 0.4s;
 }
 .tble button{
     background-color: #d69507; /* Green */
@@ -68,45 +74,44 @@ table {
   }
 
   .otherbutt button:active {
-    background-color: green ;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+    position:relative;
+    top:1px;
   }
   .minus button:active {
-    background-color: darkred;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+    position:relative;
+    top:1px;
   }
 
   .refer button {
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: #5e60e4;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-    width:220px;
-
-}
+    box-shadow: -5px 7px 18px -11px #0d0f0c;
+    background-color:#75a65d;
+    border-radius:4px;
+    border:1px solid #060805;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Georgia;
+    font-size:20px;
+    font-weight:bold;
+    padding:12px 41px;
+    text-decoration:none;
+    text-shadow:1px 2px 4px #36422e;
+  }
   .refer button:hover {
-    background-color:rgb(84, 21, 185) ;
+    background-color:#517c3b;
     transition-duration: 0.4s;
   }
   .refer button:active {
-    background-color: rgb(84, 21, 185);
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+    position:relative;
+    top:1px;
   }
+  
 
 
 .overall {
+  position: absolute;
   display: inline-block;
-  position:absolute;
   left:80%;
   top:50px;
+
 }
