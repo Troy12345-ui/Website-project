@@ -112,18 +112,26 @@
 <br>
 <div class="index">
 Symbol INDEX
-    🏠:Garage
+    🚗:Garage
     🐶:pets allowed
-    🚽:No. of bathrooms
+    🛀:No. of bathrooms
     🛌No. of bedrooms
     🪑:fully furnished
 </div>
 <div class='proplisting'>
 <table>
     <tr>
-        <th> RPML </th>
+
         <th>Property listings</th>
-        <th> RPML </th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th> Available </th>
+
     </tr>
         %for row in rows:
         <tr>

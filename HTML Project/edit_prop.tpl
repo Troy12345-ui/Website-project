@@ -75,9 +75,10 @@
 
     <label for="available">available:</label>
     <select id="available" name="available">
-        <option name="yes" value="yes">yes<option>
-        <option name="no" value="no">no<option>
+        <option name="Yes" value="Yes">yes<option>
+        <option name="No" value="No">no<option>
     </select>
+    <br>
     <input type="submit" name="correct" value="Save the property">
 </form>
 

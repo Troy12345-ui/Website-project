@@ -161,19 +161,19 @@ def new_item():
 
         pets = request.GET.get('pets_allowed','').strip()
         if pets == 'pets_allowed':
-            pets = 'yes'
+            pets = 'Yes'
         else:
-            pets = 'no'
+            pets = 'No'
         is_garage = request.GET.get('garage','').strip()
         if is_garage == 'garage':
-            is_garage = 'yes'
+            is_garage = 'Yes'
         else:
-            is_garage = 'no'
+            is_garage = 'No'
         is_furnished = request.GET.get('furnished','').strip()
         if is_furnished == 'furnished':
-            is_furnished = 'yes'
+            is_furnished = 'Yes'
         else:
-            is_furnished = 'no'
+            is_furnished = 'No'
         
         available = request.GET.get('available','').strip()
         conn = sqlite3.connect('props.db')
@@ -207,21 +207,21 @@ def edit_item():
         suburb = request.GET.get('suburbs','').strip()
         pets_in = request.GET.get('pets_in2','').strip()
         if pets_in == 'pets_in2':
-                pets_in = 'yes'
+                pets_in = 'Yes'
         else:
-                pets_in = 'no'
+                pets_in = 'No'
 
         cars_allowed = request.GET.get('cars2_allowed','').strip()
         if cars_allowed == 'cars2_allowed':
-                cars_allowed = 'yes'
+                cars_allowed = 'Yes'
         else:
-                cars_allowed = 'no'
+                cars_allowed = 'No'
 
         chairs = request.GET.get('chairs2','').strip()
         if chairs  == 'chairs2':
-                chairs = 'yes'
+                chairs = 'Yes'
         else:
-                chairs = 'no'
+                chairs = 'No'
 
         avavs = request.GET.get('available','').strip()
         conn = sqlite3.connect('props.db')

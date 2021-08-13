@@ -233,19 +233,25 @@ span {
   width:750px;
 }
 
-/*tbody>tr>:nth-child(4) {
-  bathroom one
+tbody>tr>:nth-child(4)::after  {
+  content:'🛀';
 }
-tbody>tr>:nth-child(5) {
-  bedroom one
+tbody>tr>:nth-child(5)::after  {
+  content:'🛌';
 }
-tbody>tr>:nth-child(6) {
-  pets
+tbody>tr>:nth-child(6)::after  {
+  content:'🐶';
 }
-tbody>tr>:nth-child(7) {
-  garage
+tbody>tr>:nth-child(7)::after {
+  content:'🚗';
 }
-tbody>tr>:nth-child(8) {
-  furnished
+tbody>tr>:nth-child(8)::after {
+  content:'🪑';
 }
-*/
+
+tr:nth-child(even) {
+  background-color: #c7c4c4;
+}
+tr:nth-child(odd) {
+  background-color: #f0e6e6;
+}

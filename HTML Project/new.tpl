@@ -58,16 +58,11 @@
         <option value="Penrose" name="Penrose">Penrose</option>
         <option value="Mt Albert" name="Mt Albert">Mt Albert</option>
         <option value="Remuera" name="Remuera">Remuera</option>
-
-
-        <!--<option value="" name=""></option>-->
-
-<!--"Manakau","Epsom","One Tree Hill","Howick","Pakuranga","Henderson","Botany Downs","Glen Innes","Glendowie","Ellerslie","Papakura","St Johns","Grey Lynn","Remuera","Mt Wellington","Meadowbank","St Heliers"-->
     </select>
     </label>
     <br>
 
-    <!-- change to dropdown-->
+
 
     <input type="checkbox" name="pets_allowed" value="pets_allowed" checked="checked">
     <label for= "pets_allowed">Pets allowed</label> <br>
@@ -78,10 +73,9 @@
 
     <label for="available">available:</label>
     <select id="available" name="available">
-        <option name="yes" value="yes">yes<option>
-        <option name="no" value="no">no<option>
+        <option name="Yes" value="Yes">yes<option>
+        <option name="No" value="No">no<option>
     </select>
-    <!-- NOT WORKING-->
      <br>
     <input type="submit" value="Save The Property" name="save">
 
